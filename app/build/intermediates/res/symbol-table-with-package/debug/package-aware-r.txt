@@ -378,6 +378,7 @@ color material_grey_800
 color material_grey_850
 color material_grey_900
 color my_fragment_color
+color my_red
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
@@ -677,6 +678,7 @@ id expanded_menu
 id forever
 id fragment
 id fragment_header
+id fragment_header2
 id home
 id homeAsUp
 id icon
@@ -709,6 +711,7 @@ id radio
 id radio_button_no
 id radio_button_yes
 id radio_group
+id ratingBar
 id right_icon
 id right_side
 id screen
@@ -849,17 +852,20 @@ string article1
 string article2
 string close
 string exception_message
-string hello_blank_fragment
+string my_rating
 string no
 string no_message
+string no_message2
 string open
 string question_article
+string question_the_song
 string search_menu_title
 string status_bar_notification_info_overflow
 string title1
 string title2
 string yes
 string yes_message
+string yes_message2
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
