@@ -1,8 +1,7 @@
 # Fragments
-### Task 1:Include a Fragment for the entire Activity lifecycle
+## Task 2:Add a Fragment to an Activity dynamically
 ### App screenshot
-![](./fragss1.jpg)
-![](./fragss2.jpg)
-![](./fragss3.jpg)
-### radio buttons value not changed while rotating the screen
-![](./fragss4.jpg)
+![](./fragtask2ss.jpg)
+### Fragment displayed after clicking the open button
+![](./fragtask2ss2.jpg)
+
