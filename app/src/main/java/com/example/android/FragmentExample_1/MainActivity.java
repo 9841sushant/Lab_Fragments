@@ -2,6 +2,8 @@
 
 package com.example.android.FragmentExample_1;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +14,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
     private Button mButton;
     private boolean isFragmentDisplayed = false;
+    private Button nxt_btn;
 
     // Saved instance state key.
     static final String STATE_FRAGMENT = "state_of_fragment";
@@ -21,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         // Get the button for opening and closing the fragment.
         mButton = findViewById(R.id.open_button);
+        nxt_btn=findViewById(R.id.next_button);
         // If returning from a configuration change, get the
         // fragment state and set the button text.
         if (savedInstanceState != null) {
@@ -30,7 +34,14 @@ public class MainActivity extends AppCompatActivity {
                 mButton.setText(R.string.close);
             }
         }
+        nxt_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+         public void onClick(View view) {
+                Intent intent = SecondActivity.makeIntent(MainActivity.this);
 
+                startActivity(intent);
+                }
+                });
         // Set the click listener for the button.
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,5 +92,9 @@ public class MainActivity extends AppCompatActivity {
         // Save the state of the fragment (true=open, false=closed).
         savedInstanceState.putBoolean(STATE_FRAGMENT, isFragmentDisplayed);
         super.onSaveInstanceState(savedInstanceState);
+    }
+    public static Intent makeIntent(Context context){
+        Intent intent=new Intent(context,MainActivity.class);
+        return intent;
     }
 }
